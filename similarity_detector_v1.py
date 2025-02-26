@@ -32,16 +32,19 @@ def calculate_perplexity(sentence, model, tokenizer):
 original_sentence = "The quick brown fox jumps over the lazy dog."
 predicted_sentence = "The fast brown fox leaps over a tired dog."
 
-# Calculate similarity
-similarity_score = calculate_similarity(original_sentence, predicted_sentence, similarity_model)
-print(f"Similarity Score: {similarity_score:.4f}")
+def calculate_similarity_2(original_sentence, predicted_sentence):
+    # Calculate similarity
+    similarity_score = calculate_similarity(original_sentence, predicted_sentence, similarity_model)
+    print(f"Similarity Score: {similarity_score:.4f}")
 
-# Calculate perplexity
-perplexity_original = calculate_perplexity(original_sentence, gpt2_model, tokenizer)
-perplexity_predicted = calculate_perplexity(predicted_sentence, gpt2_model, tokenizer)
+    # Calculate perplexity
+    perplexity_original = calculate_perplexity(original_sentence, gpt2_model, tokenizer)
+    perplexity_predicted = calculate_perplexity(predicted_sentence, gpt2_model, tokenizer)
 
-print(f"Original Sentence Perplexity: {perplexity_original:.2f}")
-print(f"Predicted Sentence Perplexity: {perplexity_predicted:.2f}")
+    print(f"Original Sentence Perplexity: {perplexity_original:.2f}")
+    print(f"Predicted Sentence Perplexity: {perplexity_predicted:.2f}")
+
+calculate_similarity_2(original_sentence, predicted_sentence)
 
 # Analysis criteria:
 # - High similarity score indicates good linguistic alignment.
