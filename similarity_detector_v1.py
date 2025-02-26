@@ -44,6 +44,8 @@ def calculate_similarity_2(original_sentence, predicted_sentence):
     print(f"Original Sentence Perplexity: {perplexity_original:.2f}")
     print(f"Predicted Sentence Perplexity: {perplexity_predicted:.2f}")
 
+    return similarity_score, perplexity_original, perplexity_predicted
+
 calculate_similarity_2(original_sentence, predicted_sentence)
 
 # Analysis criteria:
